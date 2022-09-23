@@ -10,7 +10,7 @@ const { Player } = require('./player');
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
-const playerQueue = [];
+let playerQueue = [];
 const ongoingGames = {};
 
 io.on('connection', (socket) => {
@@ -53,7 +53,8 @@ io.on('connection', (socket) => {
       const player =
         game.player1.id === socket.id ? game.player2 : game.player1;
       emitOpponentLeft(player.id);
-      delete ongoingGames[socket.id];
+      delete ongoingGames[game.player1.id];
+      delete ongoingGames[game.player2.id];
     }
 
     console.log(`player disconnected with id: ${socket.id}`);
