@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <div id="player_name">
+      <h1>Enter your name...</h1>
+      <input type="text" id="player_name_input" />
+      <button id="player_name_button" onclick="sendPlayerName()">Submit</button>
+    </div>
+    <div id="waiting_for_player">
+      <h1>Waiting for player...</h1>
+    </div>
+    <div id="board">
+      <h1>Tic-Tac-Toe</h1>
+      <h2 id="player1"></h2>
+      <h2 id="player2"></h2>
+      <div class="row">
+        <div class="cell" id="0-0"></div>
+        <div class="cell" id="0-1"></div>
+        <div class="cell" id="0-2"></div>
+      </div>
+      <div class="row">
+        <div class="cell" id="1-0"></div>
+        <div class="cell" id="1-1"></div>
+        <div class="cell" id="1-2"></div>
+      </div>
+      <div class="row">
+        <div class="cell" id="2-0"></div>
+        <div class="cell" id="2-1"></div>
+        <div class="cell" id="2-2"></div>
+      </div>
+    </div>
+    <h1 id="game_over"></h1>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

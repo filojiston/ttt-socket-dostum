@@ -1,0 +1,69 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #2f2519;
+}
+
+/* center board */
+#board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+  background-color: #4a3f35;
+}
+
+.clickable {
+  pointer-events: auto;
+  background-color: #fa7d09;
+}
+
+.unclickable {
+  pointer-events: none;
+  background-color: #ff4301;
+}
+
+.cell:hover {
+  background-color: gray;
+}
+
+label {
+  color: #ff4301;
+}
+
+h1 {
+  color: #ff4301;
+}
+
+h2 {
+  color: #ff4301;
+}
+
+#player1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#player2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
