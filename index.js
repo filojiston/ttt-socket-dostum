@@ -45,6 +45,7 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     if (isPlayerInQueue(socket.id)) {
       playerQueue = playerQueue.filter((player) => player.id !== socket.id);
+      console.log(`player disconnected with id: ${socket.id}`);
       return;
     }
 
